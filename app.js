@@ -75,6 +75,6 @@ function reset() {
 
     resetBtn.click()
 
-    peopleValue = '1';
+    people.value = '1';
     setPeopleValue();
 }
