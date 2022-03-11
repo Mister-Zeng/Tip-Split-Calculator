@@ -64,8 +64,8 @@ function calculateTip() {
     if (peopleValue >= 1) {
         let tipAmount = billValue * tipValue / peopleValue;
         let total = billValue * (tipValue + 1) / peopleValue;
-        totalTipPerPerson.innerHTML = `$ ${tipAmount.toFixed(2)}`;
-        totalPerPerson.innerHTML = `$ ${total.toFixed(2)}`;
+        totalTipPerPerson.innerHTML = `$${tipAmount.toFixed(2)}`;
+        totalPerPerson.innerHTML = `$${total.toFixed(2)}`;
     };
 };
 
