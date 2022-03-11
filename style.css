@@ -1,0 +1,417 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Space Mono', monospace;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainLogoContainer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 75px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.box1 {
+    position: relative;
+}
+
+#dollarLogo {
+    position: absolute;
+    width: 9px;
+    bottom: 12px;
+    left: 12px;
+    z-index: 1;
+
+}
+
+.box2, #amountOfPeople{
+    color:hsl(186, 14%, 43%);
+    font-size: .75rem;
+}
+
+.box2 {
+    margin: 20px 0 40px 0;
+}
+
+.box3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    bottom: 20px;
+}
+
+.box4 {
+    position: relative;
+
+}
+
+
+.box5 {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.labelWrapper {
+    display: flex;
+    width: 320px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.errorMsg {
+    color: indianred;
+    font-size: 12px;
+    opacity: 0;
+}
+
+.showErrorMsg {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+#personLogo {
+    position: absolute;
+    width: 11px;
+    top: 38px;
+    left: 12px;
+    z-index: 1;
+}
+
+h1 {
+    color:hsl(186, 14%, 43%);
+    font-size: .8rem;
+    margin: 20px 0 5px 0;
+}
+
+#custom {
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    padding:2px;
+}
+
+#custom::placeholder {
+    color:hsl(186, 14%, 43%);
+    font-size: 19px;
+    text-align: center;
+}
+
+.tipPercentage {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 18px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.tipPercentage:hover {
+    background-color: hsl(177, 66%, 69%);
+    color: hsl(183, 100%, 15%);
+}
+
+#custom:hover {
+    border: 2px hsl(177, 66%, 69%) solid;
+    padding: 0;
+}
+
+#custom {
+    text-align: center;
+}
+
+#custom:focus {
+    outline: none;
+}
+
+#numOfBillInput, #numOfPeopleInput {
+    background-color: hsl(189, 41%, 97%);
+    border-style: none;
+    outline: none;
+    text-align: right;
+    width: 20rem;
+    height: 2.5rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    padding-right: 20px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#numOfBillInput::placeholder, #numOfPeopleInput::placeholder {
+    color: hsl(184, 14%, 56%);
+    font-size: 18px;
+}
+#numOfBillInput:hover, #numOfPeopleInput:hover {
+    border: 2px hsl(177, 66%, 69%) solid;
+
+}
+
+.tipAmount, .totalBill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.class5 {
+    color: hsl(189, 41%, 97%);
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 30px 0 0 30px;
+}
+
+.displayMoney {
+    color: hsl(172, 67%, 45%);
+    font-size: 2.4rem;
+    white-space: nowrap;
+    padding: 30px 30px 0 0;
+}
+
+.perPerson {
+    color: hsl(184, 14%, 56%);
+    font-size: 9px;
+    white-space: nowrap;
+    padding-left: 30px;
+}
+
+.resetButton {
+    background-color: hsl(172, 67%, 45%);
+    padding: 6px;
+    margin: 110px 0 30px 0;
+    border-style: none;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    width: 90%;
+    color: hsl(183, 100%, 15%);
+}
+
+.resetButtonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.resetButton:hover {
+    background-color: hsl(177, 88%, 74%);
+}
+
+
+@media screen and (max-width: 760px) {
+    .mainLogoContainer{
+        margin-top: 40px;
+    }
+    .container {
+        width: 375px;
+        flex-direction: column;
+        padding: 0 20px 20px 20px;
+        align-items: center;
+    }
+    
+    .mainLogoContainer {
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin: 30px 0 10px 5px ;
+    }
+
+    #dollarLogo {
+        top: 75px;
+        left: 16px;
+        width: 11px;
+    }
+
+    #personLogo {
+        top: 47px;
+        left: 16px;
+    }
+    #numOfBillInput, #numOfPeopleInput {
+        width: 320px;
+        height: 40px;
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+    #numOfPeopleInput{
+        margin-top: 10px;
+    }
+
+    #numOfBillInput::placeholder, #numOfPeopleInput::placeholder{
+        font-size: 24px;
+    }
+
+    .box2{
+        margin: 30px 0 30px 5px;
+        font-size: 1rem;
+    }
+
+    .tipPercentage {
+        padding: 10px;
+        margin: 2px;
+        width: 160px;
+        font-size: 20px;
+    }
+
+    #amountOfPeople {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+
+    .box4{
+        margin-top: 10px;
+    }
+    .box5 {
+        margin-top: 30px;
+    }
+
+    .resetButton {
+        margin: 40px 0 30px 0;
+        padding: 10px;
+        font-size: 19px;
+    }
+
+    .displayMoney {
+        font-size: 2rem;
+    }
+
+    .class5 {
+        font-size: 1rem;
+    }
+    
+    .perPerson {
+        font-size: .8rem;
+    }
+    .container2 {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .container {
+        width: 325px;
+        flex-direction: column;
+        padding: 0 15px 15px 15px;
+        align-items: center;
+    }
+    #numOfPeopleInput, #numOfBillInput {
+        width: 290px;
+    }
+    .tipPercentage {
+        width: 120px;
+    }
+    .box3 {
+        justify-content: space-evenly;
+    }
+    .box5 {
+        width: 300px;
+    }
+    .resetButton{
+        width: 260px;
+    }
+}

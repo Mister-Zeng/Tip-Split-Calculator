@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Tip Calculator App</title>
+</head>
+
+<body>
+  <main>
+    <div class="mainLogoContainer"><img src="/images/logo.svg" id="mainLogo" alt="logo"></div>
+    <div class="container">
+
+      <div class="container2">
+        <div class="box1">
+          <label id="billAmountLabel" for="billAmount">
+            <h1>Bill</h1>
+          </label>
+          <img src="/images/icon-dollar.svg" id="dollarLogo" alt="dollarLogo">
+          <input id="numOfBillInput" type="number" placeholder="0">
+        </div>
+
+
+        <div class="box2">Select Tip %</div>
+
+        <div class="box3">
+          <button class="tipPercentage btn" id="5"> 5%</button>
+          <button class="tipPercentage btn" id="10">10%</button>
+          <button class="tipPercentage btn btn-active" id="15"> 15%</button>
+          <button class="tipPercentage btn" id="25">25%</button>
+          <button class="tipPercentage btn" id="50">50%</button>
+          <input class="tipPercentage btn" id="custom" placeholder="Custom" type="number">
+        </div>
+
+        <div class="box4">
+          <div class="labelWrapper">
+            <label for="numOfPeople" id="amountOfPeople">Number of People</label>
+            <div class="errorMsg">Can't be zero</div>
+          </div>
+
+          <img src="/images/icon-person.svg" id="personLogo" alt="personLogo">
+          <input id="numOfPeopleInput" type="number" autofocus name="numOfPeople" placeholder="0">
+        </div>
+
+      </div>
+
+      <div class="box5">
+
+        <div class="tipAmount">
+          <div class="sect1">
+            <div class="class5">Tip Amount</div>
+            <div class="perPerson">/ person</div>
+          </div>
+
+          <div class="displayMoney" id="displayMoney1">$0.00</div>
+        </div>
+
+        <div class="totalBill">
+          <div class="sect2">
+            <div class="class5"> Total</div>
+            <div class="perPerson">/ person </div>
+          </div>
+
+          <div class="displayMoney" id="displayMoney2">$0.00</div>
+        </div>
+        <div class="resetButtonDiv">
+          <button class="resetButton btn">RESET</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
