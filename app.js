@@ -40,7 +40,7 @@ function handleClick(event) {
 }
 
 function setTipCustomValue() {
-    tipValue = tipCustom.value / 100;
+    tipValue = parseFloat(tipCustom.value / 100);
 
     tipBtns.forEach(btn => {
         btn.classList.remove('btn-active');
