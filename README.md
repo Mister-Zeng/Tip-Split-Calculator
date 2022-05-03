@@ -40,7 +40,7 @@ Users should be able to:
 - HTML5 
 - CSS 
 - Flexbox
-- Javscript
+- JavaScript
 - Mobile-first workflow
 
 ### What I learned
